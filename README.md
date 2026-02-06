@@ -1,4 +1,4 @@
-# 🚀 JS‑CSS‑Animations
+# 🚀 CSS‑Animations
 
 **JS & CSS animation projects for beginners** 🎨💫
 
