@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Animations</title>
+
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+    /* Reset body and center text */
+    body {
+      margin: 0px;
+      font-family: 'Roboto';
+      text-align: center;
+    }
+
+    /* Main container for the animated heading */
+    #container {
+      color: #000000;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: bold;
+      padding-top: 200px;
+      position: fixed;
+      width: 100%;
+      bottom: 45%;
+      display: block;
+    }
+
+    /* This acts like a "window" that hides the extra words */
+    #flip {
+      height: 50px;
+      overflow: hidden; /* hides text outside the box */
+    }
+
+    /* Each word block */
+    #flip > div > div {
+      color: #fff;
+      padding: 4px 12px;
+      height: 45px;
+      margin-bottom: 45px;
+      display: inline-block;
+    }
+
+    /* First column starts the animation */
+    #flip div:first-child {
+      animation: show 5s linear infinite;
+    }
+
+    /* Background colors for each text block */
+    #flip div div {
+      background: #ff0000;
+    }
+
+    #flip div:first-child div {
+      background: #1900ff;
+    }
+
+    #flip div:last-child div {
+      background: #6e7506;
+    }
+
+    /* Keyframes for vertical sliding animation */
+    @keyframes show {
+      0%   { margin-top: -270px; }
+      5%   { margin-top: -180px; }
+      33%  { margin-top: -180px; }
+      38%  { margin-top: -90px; }
+      66%  { margin-top: -90px; }
+      71%  { margin-top: 0px; }
+      99.99% { margin-top: 0px; }
+      100% { margin-top: -270px; }
+    }
+
+    /* Footer text */
+    p {
+      position: fixed;
+      width: 100%;
+      bottom: 30px;
+      font-size: 12px;
+      color: #999;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main animated text -->
+  <div id="container">
+    Code 
+    <div id="flip">
+      <!-- Each block is one sliding word -->
+      <div><div>Front-end With</div></div>
+      <div><div>Back-end With</div></div>
+      <div><div>AI With</div></div>
+    </div>
+    Lakminda!
+  </div>
+
+  <!-- Footer caption -->
+  <p>a css3 animation demo for you</p>
+
+</body>
+</html>
